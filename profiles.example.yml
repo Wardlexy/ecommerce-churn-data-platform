@@ -1,0 +1,13 @@
+ecommerce_churn_platform:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: churn
+      password: churn
+      port: 5432
+      dbname: churn_warehouse
+      schema: public
+      threads: 4
+

@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_customer_behavior
+    description: Cleanly typed staging model for raw e-commerce customer behavior.
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+      - name: churned
+        tests:
+          - accepted_values:
+              values: [0, 1]
+
+  - name: mart_customer_churn
+    description: Dashboard-ready churn risk mart.
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+      - name: risk_segment
+        tests:
+          - accepted_values:
+              values: ["Low", "Medium", "High"]
+

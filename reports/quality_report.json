@@ -1,0 +1,70 @@
+{
+  "run_timestamp_utc": "2026-06-15T03:21:43+00:00",
+  "database": "C:\\Users\\lexdw\\OneDrive\\Documents\\Portfolio\\Data Engineer\\warehouse\\ecommerce_churn.db",
+  "raw_rows": 5008,
+  "clean_rows": 4990,
+  "processed_data_path": "C:\\Users\\lexdw\\OneDrive\\Documents\\Portfolio\\Data Engineer\\data\\processed\\customer_behavior_clean.csv",
+  "quality_report_path": "C:\\Users\\lexdw\\OneDrive\\Documents\\Portfolio\\Data Engineer\\reports\\quality_report.json",
+  "checks": [
+    {
+      "name": "raw_rows_present",
+      "status": "pass",
+      "severity": "error",
+      "detail": "raw rows=5008"
+    },
+    {
+      "name": "clean_rows_present",
+      "status": "pass",
+      "severity": "error",
+      "detail": "clean rows=4990"
+    },
+    {
+      "name": "row_retention_above_90pct",
+      "status": "pass",
+      "severity": "warning",
+      "detail": "retained=4990/5008"
+    },
+    {
+      "name": "customer_id_not_null",
+      "status": "pass",
+      "severity": "error",
+      "detail": "null customer_id=0"
+    },
+    {
+      "name": "customer_id_unique",
+      "status": "pass",
+      "severity": "error",
+      "detail": "duplicate customer_id=0"
+    },
+    {
+      "name": "churned_binary",
+      "status": "pass",
+      "severity": "error",
+      "detail": "values=[0, 1]"
+    },
+    {
+      "name": "age_in_valid_range",
+      "status": "pass",
+      "severity": "error",
+      "detail": "min=15, max=75"
+    },
+    {
+      "name": "cart_abandonment_rate_valid",
+      "status": "pass",
+      "severity": "error",
+      "detail": "expected 0 to 100 percent"
+    },
+    {
+      "name": "estimated_revenue_non_negative",
+      "status": "pass",
+      "severity": "error",
+      "detail": "min=0.0"
+    },
+    {
+      "name": "risk_segments_populated",
+      "status": "pass",
+      "severity": "warning",
+      "detail": "segments=['High', 'Low', 'Medium']"
+    }
+  ]
+}
