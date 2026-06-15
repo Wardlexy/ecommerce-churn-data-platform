@@ -1,0 +1,6 @@
+# Keep GitHub language stats focused on the actual data engineering code.
+legacy/* linguist-documentation
+data/raw/* linguist-generated
+data/processed/* linguist-generated
+reports/* linguist-generated
+
